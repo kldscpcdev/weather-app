@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div class="current-date-time">
+          <div class="time" id="current-time">7:10 AM</div>
+          <hr />
+          <div class="date" id="current-date">APRIL 28</div>
+        </div>
+        <div class="search">
+          <form class="form-inline location-search" id="location-form">
+            <input
+              class="form-control mr-sm-2 loc-form form-control-lg search-input"
+              type="search"
+              placeholder="Location"
+              aria-label="Search for location"
+              id="loc-search-input"
+            />
+            <button class="btn my-2 my-sm-0 search-loc" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="weather-img">
+        <img
+          src="./images/partly-cloudy.png"
+          alt="3D illustration of partly cloudy weather"
+          class="weather"
+        />
+      </div>
+      <div class="current-location">
+        <h1>Los Angeles</h1>
+        <div class="weather-display">
+          <h2>17</h2>
+          <span class="alt-unit">&deg;C</span>
+        </div>
+      </div>
+      <div class="forecast">
+        <div class="daily-forecast">
+          <div class="day">Mon</div>
+          <div class="forecast-icon">
+            <img src="./images/cloudy-sun.svg" alt="" class="forecast-icon" />
+          </div>
+          <div class="weather-forecast">70&deg;F</div>
+        </div>
+
+        <div class="daily-forecast">
+          <div class="day">Tue</div>
+          <div class="forecast-icon">
+            <img src="./images/cloudy.svg" alt="" class="forecast-icon" />
+          </div>
+          <div class="weather-forecast">65&deg;F</div>
+        </div>
+
+        <div class="daily-forecast">
+          <div class="day">Wed</div>
+          <div class="forecast-icon">
+            <img src="./images/rain-2.svg" alt="" class="forecast-icon" />
+          </div>
+          <div class="weather-forecast">70&deg;F</div>
+        </div>
+
+        <div class="daily-forecast">
+          <div class="day">Thu</div>
+          <div class="forecast-icon">
+            <img src="./images/cloudy.svg" alt="" class="forecast-icon" />
+          </div>
+          <div class="weather-forecast">63&deg;F</div>
+        </div>
+
+        <div class="daily-forecast">
+          <div class="day">Fri</div>
+          <div class="forecast-icon">
+            <img src="./images/windy-sun.svg" alt="" class="forecast-icon" />
+          </div>
+          <div class="weather-forecast">58&deg;F</div>
+        </div>
+
+        <div class="daily-forecast">
+          <div class="day">Sat</div>
+          <div class="forecast-icon">
+            <img src="./images/cloudy-sun.svg" alt="" class="forecast-icon" />
+          </div>
+          <div class="weather-forecast">70&deg;F</div>
+        </div>
+
+        <div class="daily-forecast">
+          <div class="day">Sun</div>
+          <div class="forecast-icon">
+            <img src="./images/sun.svg" alt="" class="forecast-icon" />
+          </div>
+          <div class="weather-forecast">74&deg;F</div>
+        </div>
+      </div>
+    </div>
+    <script src="./src/script.js"></script>
+  </body>
+</html>

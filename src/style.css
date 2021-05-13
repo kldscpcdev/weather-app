@@ -1,0 +1,128 @@
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: no-repeat
+    url(https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80);
+  background-position: center;
+  background-size: cover;
+  color: #ffeef2;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-weight: 100;
+  font-size: 3.998rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+h2 {
+  font-weight: 500;
+  font-size: 7.89rem;
+  color: #fff;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+a {
+  text-decoration: none;
+  color: #e7d1e3;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(36, 17, 68, 0.37);
+}
+
+.container {
+  height: 100%;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 5px 5px 30px rgba(36, 17, 68, 0.37), -3px -3px 25px #eedceeab;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  margin: 50px;
+  padding-bottom: 50px;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.current-date-time {
+  margin-top: 25px;
+  margin-left: 25px;
+  padding: 10px 30px;
+}
+.time,
+.date {
+  font-weight: 400;
+  font-size: 1.414rem;
+  color: #ffeef2;
+}
+
+.search-loc,
+.current-date-time {
+  border: 0.125rem solid #e7d1e3;
+  border-radius: 15px;
+}
+
+.location-search {
+  margin-top: 25px;
+  margin-right: 25px;
+}
+
+.loc-form::placeholder {
+  color: #948a92;
+  font-size: 1.414rem;
+}
+
+.search-loc {
+  color: #e7d1e3;
+  font-size: 1.414rem;
+}
+
+.search-input {
+  border-radius: 15px;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.daily-forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.forecast-icon {
+  width: 50px;
+}
+
+.day,
+.weather-forecast {
+  font-size: 1.414rem;
+  line-height: 2.5rem;
+}
+
+.weather-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.alt-unit {
+  font-size: 1.414rem;
+  position: relative;
+  top: 1rem;
+  right: -0.5rem;
+}
