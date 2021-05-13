@@ -70,21 +70,3 @@ function showSearchInput(event) {
 
 let searchForm = document.querySelector("#location-form");
 searchForm.addEventListener("submit", showSearchInput);
-
-// switch between F and C temps
-function switchToFahr(event) {
-  event.preventDefault();
-  let h2Text = document.querySelector("h2");
-  h2Text.innerHTML = "63";
-}
-function switchToCel(event) {
-  event.preventDefault();
-  let h2Text = document.querySelector("h2");
-  h2Text.innerHTML = "17";
-}
-
-let celUnit = document.querySelector("#cel-unit");
-let fahrUnit = document.querySelector("#fahr-unit");
-
-celUnit.addEventListener("click", switchToCel);
-fahrUnit.addEventListener("click", switchToFahr);
