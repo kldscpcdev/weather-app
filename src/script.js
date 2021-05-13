@@ -66,6 +66,8 @@ function showSearchInput(event) {
   h1Text.innerHTML = inputText.value;
 
   inputText.value = "";
+
+  //let cityName = inputText.value;
 }
 
 let searchForm = document.querySelector("#location-form");
