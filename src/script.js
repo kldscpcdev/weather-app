@@ -57,6 +57,13 @@ let currentDate = document.querySelector("#current-date");
 // add the load HTML DOM event to currentTime, set function displayTime
 currentDate.addEventListener("DOMContentLoaded", displayDate());
 
+//display temp in city from search input
+function showTemp(response) {
+  let currentTemp = Math.round(response.data.main.temp);
+  let tempDisplay = document.querySelector("h2");
+  tempDisplay.innerHTML = `${currentTemp}\xB0C💓`;
+}
+
 // display search input
 function showSearchInput(event) {
   event.preventDefault();
@@ -67,7 +74,11 @@ function showSearchInput(event) {
 
   inputText.value = "";
 
-  //let cityName = inputText.value;
+  let apiKey = "dc7771fb57d0403dbd163832b559b2be";
+  let apiURL = "api.openweathermap.org/data/2.5/weather?";
+  let cityName = inputText.value;
+
+  axios.get(`${apiUrl}q=${cityName}&appid=${apiKey}`).then(showTemp);
 }
 
 let searchForm = document.querySelector("#location-form");
