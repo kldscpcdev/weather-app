@@ -75,7 +75,7 @@ function showSearchInput(event) {
   inputText.value = "";
 
   let apiKey = "dc7771fb57d0403dbd163832b559b2be";
-  let apiURL = "api.openweathermap.org/data/2.5/weather?";
+  let apiUrl = "api.openweathermap.org/data/2.5/weather?";
   let cityName = inputText.value;
 
   axios.get(`${apiUrl}q=${cityName}&appid=${apiKey}`).then(showTemp);
