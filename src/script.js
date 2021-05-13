@@ -72,7 +72,7 @@ function showSearchInput(event) {
 
   h1Text.innerHTML = inputText.value;
 
-  inputText.value = "";
+  //inputText.value = "";
 
   let apiKey = "dc7771fb57d0403dbd163832b559b2be";
   let apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
