@@ -93,6 +93,15 @@ a:hover {
   border-radius: 15px;
 }
 
+.geoloc-btn {
+  border-radius: 15px;
+  background-color: #e7d1e3;
+  color: #5f555d;
+  font-size: 1.414rem;
+  float: right;
+  margin-top: 1.414rem !important;
+}
+
 .forecast {
   display: flex;
   flex-direction: row;
@@ -118,11 +127,4 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-
-.alt-unit {
-  font-size: 1.414rem;
-  position: relative;
-  top: 1rem;
-  right: -0.5rem;
 }

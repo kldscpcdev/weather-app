@@ -61,7 +61,7 @@ currentDate.addEventListener("DOMContentLoaded", displayDate());
 function showTemp(response) {
   let currentTemp = Math.round(response.data.main.temp);
   let tempDisplay = document.querySelector("h2");
-  tempDisplay.innerHTML = `${currentTemp}\xB0C💓`;
+  tempDisplay.innerHTML = `${currentTemp}\xB0C`;
 }
 
 // display search input
