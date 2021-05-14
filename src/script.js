@@ -62,7 +62,16 @@ function showTemp(response) {
   let currentTemp = Math.round(response.data.main.temp);
   let tempDisplay = document.querySelector("h2");
   tempDisplay.innerHTML = `${currentTemp}\xB0C`;
+
+  let currentCity = response.data.name;
+  let h1Text = document.querySelector("h1");
+
+  h1Text.innerHTML = currentCity;
 }
+
+let apiKey = "dc7771fb57d0403dbd163832b559b2be";
+let apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
+let units = "metric";
 
 // display search input
 function showSearchInput(event) {
@@ -72,17 +81,33 @@ function showSearchInput(event) {
 
   h1Text.innerHTML = inputText.value;
 
-  //inputText.value = "";
-
-  let apiKey = "dc7771fb57d0403dbd163832b559b2be";
-  let apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
-  let units = "metric";
   let cityName = inputText.value;
 
   axios
     .get(`${apiUrl}q=${cityName}&units=${units}&appid=${apiKey}`)
     .then(showTemp);
+
+  inputText.value = "";
 }
 
 let searchForm = document.querySelector("#location-form");
 searchForm.addEventListener("submit", showSearchInput);
+
+// geolocation api to show current location temp
+function setCoords(position) {
+  let currentLat = position.coords.latitude;
+  let currentLon = position.coords.longitude;
+
+  axios
+    .get(
+      `${apiUrl}&lat=${currentLat}&lon=${currentLon}&units=${units}&appid=${apiKey}`
+    )
+    .then(showTemp);
+}
+
+function getCoordinates() {
+  navigator.geolocation.getCurrentPosition(setCoords);
+}
+
+let geoLocButton = document.querySelector("#geobtn");
+geoLocButton.addEventListener("click", getCoordinates);
